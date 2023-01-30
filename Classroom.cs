@@ -9,6 +9,11 @@ namespace Lab04
 {
     public class Classroom
     {
-        Person PersonNew = new Person(this.tbName.Text);
+        //Person PersonNew = new Person(this.tbName.Text);
+
+        //public AllPersonShow()
+        //{
+            //this
+        //}
     }
 }

@@ -16,6 +16,14 @@ namespace Lab04
             this.Name = iName;
             this.Age = 2566 - iAge;
             this.Grade = iGrade;
+            if (iAge > Age)
+            {
+                this.Age = iAge;
+            }
+            if (iGrade > Grade)
+            {
+                this.Grade = iGrade;
+            }
         }
         public int getAge()
         {

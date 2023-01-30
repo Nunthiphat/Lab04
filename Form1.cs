@@ -9,7 +9,7 @@ namespace Lab04
         public Form1()
         {
             InitializeComponent();
-            classroom = new Classroom("OOP");
+            classroom = new Classroom();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -19,20 +19,16 @@ namespace Lab04
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            string input_name = this.tbName.Text;
-            string input_year = this.tbBirthYear.Text;
-            int iYear = int.Parse(input_year);
-            string input_grade = this.tbGPA.Text;
-            double iGrade = double.Parse(input_grade);
+            string iName = this.tbName.Text;
+            int iAge = int.Parse(this.tbBirthYear.Text);
+            double iGrade = Double.Parse(this.tbGPA.Text);
 
-            Person person = new Person(input_name, iYear ,iGrade);
-            this.classroom.AddPersontoClass(person);
+            Person persons = new Person(iName, iAge, iGrade);
+            this.tbName.Text = "";
+            this.tbGPA.Text = "";
+            this.tbBirthYear.Text = "";
 
-
-            this.tbListofPerson.Text =
-                this.classroom.showAllPersoninClass();
-
-            this.tbTotal.Text = "";
+            
         }
 
         private void tbTotal_TextChanged(object sender, EventArgs e)

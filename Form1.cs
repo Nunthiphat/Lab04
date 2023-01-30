@@ -3,13 +3,12 @@ using System.Security.Cryptography.X509Certificates;
 namespace Lab04
 {
     public partial class Form1 : Form
-    {
-        private Classroom classroom;
-
+    {   
+        Classroom classroom;
         public Form1()
         {
             InitializeComponent();
-            classroom = new Classroom();
+            classroom = new Classroom("OOP");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -20,15 +19,17 @@ namespace Lab04
         private void btAdd_Click(object sender, EventArgs e)
         {
             string iName = this.tbName.Text;
-            int iAge = int.Parse(this.tbBirthYear.Text);
-            double iGrade = Double.Parse(this.tbGPA.Text);
+            string Age = this.tbBirthYear.Text;
+            string Grade = this.tbGPA.Text;
+            int iAge = int.Parse(Age);
+            double iGrade = Double.Parse(Grade);
 
             Person persons = new Person(iName, iAge, iGrade);
             this.tbName.Text = "";
             this.tbGPA.Text = "";
             this.tbBirthYear.Text = "";
 
-            
+            this.classroom.addPersonToClass(persons); 
         }
 
         private void tbTotal_TextChanged(object sender, EventArgs e)

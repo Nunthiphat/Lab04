@@ -9,11 +9,26 @@ namespace Lab04
 {
     public class Classroom
     {
-        //Person PersonNew = new Person(this.tbName.Text);
+        private string name;
+        private List<Person> persons = new List <Person>();
 
-        //public AllPersonShow()
-        //{
-            //this
-        //}
+        public Classroom(string name)
+        {
+            this.name = name;
+        }
+        public void addPersonToClass(Person person)
+        {
+            this.persons.Add(person);
+        }
+        /*
+        public string showAllPersoninclass()
+        {
+            string result = "";
+            foreach (Person p in this.persons)
+            {
+                result += p.getName() + "\r\n";
+            }
+            return result;
+        } */
     }
 }

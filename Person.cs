@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 
 namespace Lab04
 {
-    internal class Person
+    public class Person
     {
-        private string Name;
+        private string name { get; set; }
+        private double gpa { get; set; }
+        private int birthYear { get; set; }
+
+        public Person(string name, int bYear, double gpa)
+        {
+            this.name = name;
+            this.gpa = gpa;
+            this.birthYear = 2566 - bYear;
+        }
+        /*private string Name;
         private int Age;
         private Double Grade; 
         public Person (string iName, int iAge, double iGrade)
@@ -36,6 +46,6 @@ namespace Lab04
         public double getGrade()
         {
             return this.Grade;
-        }
+        }*/
     }
 }

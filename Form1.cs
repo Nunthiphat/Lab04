@@ -29,7 +29,8 @@ namespace Lab04
             this.tbGPA.Text = "";
             this.tbBirthYear.Text = "";
 
-            this.classroom.addPersonToClass(persons); 
+            this.classroom.addPersonToClass(persons);
+            tbListofPerson.Text = classroom.showAllPersoninclass();
         }
 
         private void tbTotal_TextChanged(object sender, EventArgs e)

@@ -20,7 +20,7 @@ namespace Lab04
         {
             this.persons.Add(person);
         }
-        /*
+        
         public string showAllPersoninclass()
         {
             string result = "";
@@ -29,6 +29,6 @@ namespace Lab04
                 result += p.getName() + "\r\n";
             }
             return result;
-        } */
+        }
     }
 }

@@ -12,15 +12,15 @@ namespace Lab04
         private double gpa { get; set; }
         private int birthYear { get; set; }
 
-        public Person(string name, int bYear, double gpa)
-        {
-            this.name = name;
-            this.gpa = gpa;
-            this.birthYear = 2566 - bYear;
-        }
-        /*private string Name;
+        //public Person(string name, int bYear, double gpa)
+        //{
+          //  this.name = name;
+            //this.gpa = gpa;
+            //this.birthYear = 2566 - bYear;
+        //}
+        private string Name;
         private int Age;
-        private Double Grade; 
+        private Double Grade;
         public Person (string iName, int iAge, double iGrade)
         {
             this.Name = iName;
@@ -46,6 +46,6 @@ namespace Lab04
         public double getGrade()
         {
             return this.Grade;
-        }*/
+        }
     }
 }

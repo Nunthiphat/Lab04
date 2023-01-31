@@ -31,6 +31,11 @@ namespace Lab04
 
             this.classroom.addPersonToClass(persons);
             tbListofPerson.Text = classroom.showAllPersoninclass();
+            tbGpaMax.Text = classroom.showMaxPersoninclass().ToString();
+            //double v = persons.maxPersonGrade();
+            //tbGpaMax.Text = v.ToString();
+            //string o = persons.NamemaxPersonGrade();
+            //tbNameMax.Text = o.ToString();
         }
 
         private void tbTotal_TextChanged(object sender, EventArgs e)

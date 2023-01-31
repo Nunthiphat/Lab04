@@ -115,7 +115,7 @@
             this.tbListofPerson.Location = new System.Drawing.Point(355, 188);
             this.tbListofPerson.Multiline = true;
             this.tbListofPerson.Name = "tbListofPerson";
-            this.tbListofPerson.Size = new System.Drawing.Size(125, 142);
+            this.tbListofPerson.Size = new System.Drawing.Size(361, 223);
             this.tbListofPerson.TabIndex = 7;
             // 
             // label4

@@ -71,6 +71,7 @@
             this.tbGPA.Name = "tbGPA";
             this.tbGPA.Size = new System.Drawing.Size(125, 27);
             this.tbGPA.TabIndex = 2;
+            this.tbGPA.TextChanged += new System.EventHandler(this.tbGPA_TextChanged);
             // 
             // label1
             // 

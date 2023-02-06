@@ -20,19 +20,16 @@ namespace Lab04
         {
             string iName = this.tbName.Text;
             string Age = this.tbBirthYear.Text;
-            string Grade = this.tbGPA.Text;
             int iAge = int.Parse(Age);
-            double iGrade = Double.Parse(Grade);
-
+            double iGrade = Double.Parse(this.tbGPA.Text);
             Person persons = new Person(iName, iAge, iGrade);
             this.tbName.Text = "";
             this.tbGPA.Text = "";
             this.tbBirthYear.Text = "";
-
+            
+            tbGpaAvg.Text = classroom.getGpaAvg().ToString();
             this.classroom.addPersonToClass(persons);
             tbListofPerson.Text = classroom.showAllPersoninclass();
-            tbTotal.Text = classroom.AgeSum().ToString();
-            //tbGpaMax.Text = classroom.showMaxPersoninclass().ToString();
         }
 
         private void tbTotal_TextChanged(object sender, EventArgs e)
@@ -41,6 +38,11 @@ namespace Lab04
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbGPA_TextChanged(object sender, EventArgs e)
         {
 
         }

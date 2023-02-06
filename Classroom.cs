@@ -11,10 +11,9 @@ namespace Lab04
     {
         private string name;
         private List<Person> persons = new List<Person>();
-        private List<int> AgeList = new List<int>();
-        private Person _minPerson = new Person("max",1);
         private int _AgeSum = 0;
-        private double _GpaAvg = 0; 
+        private double _GpaAvg = 0;
+        private double _GpaSum = 0;
         public Classroom(string name)
         {
             this.name = name;
@@ -23,12 +22,9 @@ namespace Lab04
         {
             this.persons.Add(person);
             this._AgeSum += person.getAge();
-            if (person.getAge() < _minPerson.getAge() )
-            {
-                this._minPerson = person;
-            }
+            this._GpaSum += person.getGrade();
         }
-        
+
         public string showAllPersoninclass()
         {
             string result = "";
@@ -36,24 +32,32 @@ namespace Lab04
             {
                 result += p.getName() + "\t";
                 result += p.getAge() + "\t";
-                result += p.getGrade() + "\t";
+                result += p.getGrade() + "\t\r\n";
             }
             return result;
         }
-        
-        public int AgeSum()
+        public double getGpaSum()
         {
-            return AgeList.Sum();
+            return _GpaSum;
         }
 
+        public int PersonCount()
+        {
+            return this.persons.Count();
+        }
         public double getGpaAvg()
         {
-            double _GpaAvg = 0.0;
+            double _GpaAvg = 0;
             foreach (Person person in this.persons)
             {
-                _;
+                _GpaAvg += _GpaAvg + person.getGrade();
             }
-            return _GpaAvg;
+            return this._GpaAvg / this.persons.Count;
+        }
+
+        public int getAgeSum()
+        {
+            return this._AgeSum;
         }
     }
 }

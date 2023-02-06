@@ -10,13 +10,14 @@ namespace Lab04
     {
         private string Name;
         private int Age;
-        private Double Grade;
+        public double Grade;
         
 
-        public Person(string iName, int iAge)
+        public Person(string iName, int iAge, double iGrade)
         {
             this.Name = iName;
             this.Age = 2565 - iAge;
+            this.Grade = iGrade;
         }
 
         public int getAge()

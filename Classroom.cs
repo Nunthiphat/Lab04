@@ -11,11 +11,10 @@ namespace Lab04
     {
         private string name;
         private List<Person> persons = new List<Person>();
-        private List<double> GpaList = new List<double>();
-        private List<string> NameList = new List<string>();
         private List<int> AgeList = new List<int>();
-        private Person _minPerson = new Person("Max", 1);
-        private int _agesum = 0;
+        private Person _minPerson = new Person("max",1);
+        private int _AgeSum = 0;
+        private double _GpaAvg = 0; 
         public Classroom(string name)
         {
             this.name = name;
@@ -23,7 +22,7 @@ namespace Lab04
         public void addPersonToClass(Person person)
         {
             this.persons.Add(person);
-            this._agesum += person.getAge();
+            this._AgeSum += person.getAge();
             if (person.getAge() < _minPerson.getAge() )
             {
                 this._minPerson = person;
@@ -41,37 +40,20 @@ namespace Lab04
             }
             return result;
         }
-        //public void addPerson(Person person)
-        //{
-        //    persons.Add(person);
-        //    GpaList.Add(person.Grade);
-        //    AgeList.Add(person.Age);
-        //}
-
+        
         public int AgeSum()
         {
             return AgeList.Sum();
         }
 
-        //public double ChangeListToArray()
-        //{
-        //    double result4 = 0;
-        //    foreach (Person f in persons)
-        //    {
-        //        result4 += f.getGrade();
-        //    }
-        //    return result4;
-        //}
-        //private double[] doubleList = ChangeListToArray().ToArray();
-
-        //public double showMaxPersoninclass() 
-        //{
-        //    double result3 = 2;
-        //    foreach (var u in this.persons)
-        //    {
-        //        result3 = u.maxPersonGrade();
-        //    }
-        //    return result3;
-        //}
+        public double getGpaAvg()
+        {
+            double _GpaAvg = 0.0;
+            foreach (Person person in this.persons)
+            {
+                _;
+            }
+            return _GpaAvg;
+        }
     }
 }

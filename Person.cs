@@ -13,16 +13,14 @@ namespace Lab04
         private Double Grade;
         
 
-        public Person(string iName, int iAge, double iGrade)
+        public Person(string iName, int iAge)
         {
             this.Name = iName;
-            this.Age = iAge;
-            this.Grade = iGrade;
+            this.Age = 2565 - iAge;
         }
 
         public int getAge()
         {
-            this.Age = 2566 - this.Age;
             return this.Age;
         }
 
@@ -35,39 +33,5 @@ namespace Lab04
         {
             return this.Grade;
         }
-
-    //    private List<Person> persons = new List<Person>();
-
-    //    public double maxPersonGrade()
-    //    {
-    //        double result2 = getGrade();
-    //        double general = getGrade();
-    //        foreach (Person i in this.persons)
-    //        {
-    //            if (general > i.Grade)
-    //            {
-    //                result2 = persons.Count;
-    //            }
-    //        }
-    //        return result2;
-    //    }
-
-    //    public string NamemaxPersonGrade()
-    //    {
-    //        double result2 = 0;
-    //        string maxGradeName = "";
-    //        double general;
-    //        foreach (var i in this.persons)
-    //        {
-    //            general = i.getGrade();
-    //            result2 += i.getGrade();
-    //            if (i.getGrade())
-    //            {
-    //                result2 = i.getGrade();
-    //                maxGradeName = i.getName();
-    //            }
-    //        }
-    //        return maxGradeName;
-    //    }
     }
 }

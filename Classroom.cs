@@ -11,6 +11,9 @@ namespace Lab04
     {
         private string name;
         private List<Person> persons = new List<Person>();
+        private List<double> GpaList = new List<double>();
+        private List<string> NameList = new List<string>();
+        private List<int> AgeList = new List<int>();
         public Classroom(string name)
         {
             this.name = name;
@@ -31,15 +34,37 @@ namespace Lab04
             }
             return result;
         }
-
-        public double showMaxPersoninclass() 
+        public void addPerson(Person person)
         {
-            double result3 = 2;
-            foreach (Person u in this.persons)
-            {
-                result3 = u.maxPersonGrade();
-            }
-            return result3;
+            persons.Add(person);
+            GpaList.Add(person.Grade);
+            AgeList.Add(person.Age);
         }
+
+        public int AgeSum()
+        {
+            return AgeList.Sum();
+        }
+
+        //public double ChangeListToArray()
+        //{
+        //    double result4 = 0;
+        //    foreach (Person f in persons)
+        //    {
+        //        result4 += f.getGrade();
+        //    }
+        //    return result4;
+        //}
+        //private double[] doubleList = ChangeListToArray().ToArray();
+
+        //public double showMaxPersoninclass() 
+        //{
+        //    double result3 = 2;
+        //    foreach (var u in this.persons)
+        //    {
+        //        result3 = u.maxPersonGrade();
+        //    }
+        //    return result3;
+        //}
     }
 }

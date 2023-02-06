@@ -8,13 +8,9 @@ namespace Lab04
 {
     public class Person
     {
-        //private string name { get; set; }
-        //private double gpa { get; set; }
-        //private int birthYear { get; set; }
-
         private string Name;
-        private int Age;
-        private Double Grade;
+        public int Age;
+        public Double Grade;
         private Double MaxGrade;
         private Double MinGrade;
         
@@ -42,38 +38,38 @@ namespace Lab04
             return this.Grade;
         }
 
-        private List<Person> persons = new List<Person>();
+    //    private List<Person> persons = new List<Person>();
 
-        public double maxPersonGrade()
-        {
-            double result2 = getGrade();
-            double general = getGrade();
-            foreach (Person i in this.persons)
-            {
-                if (general > i.Grade)
-                {
-                    result2 = persons.Count;
-                }
-            }
-            return result2;
-        }
+    //    public double maxPersonGrade()
+    //    {
+    //        double result2 = getGrade();
+    //        double general = getGrade();
+    //        foreach (Person i in this.persons)
+    //        {
+    //            if (general > i.Grade)
+    //            {
+    //                result2 = persons.Count;
+    //            }
+    //        }
+    //        return result2;
+    //    }
 
-        public string NamemaxPersonGrade()
-        {
-            double result2 = 0;
-            string maxGradeName = "";
-            double general;
-            foreach (Person i in this.persons)
-            {
-                general = i.getGrade();
-                result2 += i.getGrade();
-                if (result2 == 0)
-                {
-                    result2 = i.getGrade();
-                    maxGradeName = i.getName();
-                }
-            }
-            return maxGradeName;
-        }
+    //    public string NamemaxPersonGrade()
+    //    {
+    //        double result2 = 0;
+    //        string maxGradeName = "";
+    //        double general;
+    //        foreach (var i in this.persons)
+    //        {
+    //            general = i.getGrade();
+    //            result2 += i.getGrade();
+    //            if (i.getGrade())
+    //            {
+    //                result2 = i.getGrade();
+    //                maxGradeName = i.getName();
+    //            }
+    //        }
+    //        return maxGradeName;
+    //    }
     }
 }

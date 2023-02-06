@@ -9,10 +9,8 @@ namespace Lab04
     public class Person
     {
         private string Name;
-        public int Age;
-        public Double Grade;
-        private Double MaxGrade;
-        private Double MinGrade;
+        private int Age;
+        private Double Grade;
         
 
         public Person(string iName, int iAge, double iGrade)

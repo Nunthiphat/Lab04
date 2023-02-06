@@ -18,7 +18,7 @@ namespace Lab04
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            string iName = this.tbName.Text;
+            string Name = this.tbName.Text;
             string Age = this.tbBirthYear.Text;
             string Grade = this.tbGPA.Text;
             int iAge = int.Parse(Age);

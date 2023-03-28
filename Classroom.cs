@@ -9,20 +9,25 @@ namespace Lab04
 {
     public class Classroom
     {
-        private string name;
         private List<Person> persons = new List<Person>();
+        private List<double> lsgrade = new List<double>(); 
+        private List<string> lsname = new List<string>();
+
+        private string name;
+        private int age;
+        private double grade;
         private int _AgeSum = 0;
         private double _GpaAvg = 0;
         private double _GpaSum = 0;
+
         public Classroom(string name)
         {
             this.name = name;
         }
-        public void addPersonToClass(Person person)
+
+        public void addPerson2Class(Person p)
         {
-            this.persons.Add(person);
-            this._AgeSum += person.getAge();
-            this._GpaSum += person.getGrade();
+            this.persons.Add(p);
         }
 
         public string showAllPersoninclass()
@@ -36,28 +41,50 @@ namespace Lab04
             }
             return result;
         }
-        public double getGpaSum()
-        {
-            return _GpaSum;
-        }
 
-        public int PersonCount()
+        public void addGpa2Class()
         {
-            return this.persons.Count();
-        }
-        public double getGpaAvg()
-        {
-            double _GpaAvg = 0;
-            foreach (Person person in this.persons)
+            foreach (Person p in persons) 
             {
-                _GpaAvg += _GpaAvg + person.getGrade();
+                lsgrade.Add(p.Grade);
+                lsname.Add(p.Name);
             }
-            return this._GpaAvg / this.persons.Count;
+        }
+        public int showAgeAll()
+        {
+            int Result = 0;
+            foreach (var p in this.persons)
+            {
+                Result += p.getAge();
+            }
+            return Result;
+        }
+        public double getMaxGrade()
+        {
+            double max = lsgrade.Max();
+            return max;
         }
 
-        public int getAgeSum()
+        public double getMinGrade()
         {
-            return this._AgeSum;
+            double min = lsgrade.Min();
+            return min;
+        }
+
+        public double getAvgGrade()
+        {
+            double avg = lsgrade.Average();
+            return avg;
+        }
+
+        public string getNameMaxGrade()
+        {
+            return lsname[lsgrade.IndexOf(lsgrade.Max())];
+        }
+
+        public string getNameMinGrade()
+        {
+            return lsname[lsgrade.IndexOf(lsgrade.Min())];
         }
     }
 }
